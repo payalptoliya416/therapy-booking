@@ -253,9 +253,8 @@ h2 {
   color: #fff;
   border-color: #5eab5a;
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
-
 
 .login-btn {
   padding: 10px 25px;
@@ -273,7 +272,7 @@ h2 {
 .login-btn:hover {
   background: #4b9647;
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 .menu-toggle {
   display: none;
@@ -1925,6 +1924,11 @@ h2 {
   left: 0%;
   top: 0%;
   z-index: -1;
+}
+@media (max-width: 640px) {
+  .im3 {
+    top: 100%;
+  }
 }
 .position-relative {
   position: relative;
