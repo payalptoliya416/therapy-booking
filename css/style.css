@@ -235,7 +235,6 @@ h2 {
   display: flex;
   gap: 15px;
 }
-
 .contact-btn {
   padding: 10px 25px;
   border-radius: 18px;
@@ -246,7 +245,17 @@ h2 {
   font-weight: 500;
   line-height: 20px;
   color: #000000;
+  transition: all 0.3s ease;
 }
+
+.contact-btn:hover {
+  background: #5eab5a;
+  color: #fff;
+  border-color: #5eab5a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
 
 .login-btn {
   padding: 10px 25px;
@@ -258,8 +267,14 @@ h2 {
   line-height: 20px;
   color: #fff;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
+.login-btn:hover {
+  background: #4b9647;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
 .menu-toggle {
   display: none;
   flex-direction: column;
