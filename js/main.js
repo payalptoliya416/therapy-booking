@@ -21,3 +21,47 @@ headers.forEach((header) => {
     }
   });
 });
+
+// ---------carousel slider----------herosection ---start
+function changeImage(el) {
+  document.getElementById("mainImage").src = el.src;
+
+  document.querySelectorAll(".thumb").forEach((img) => {
+    img.classList.remove("active");
+  });
+
+  el.classList.add("active");
+}
+
+/* mouse drag scroll */
+const slider = document.getElementById("thumbs");
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener("mousedown", (e) => {
+  isDown = true;
+  slider.classList.add("active");
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener("mouseleave", () => {
+  isDown = false;
+});
+
+slider.addEventListener("mouseup", () => {
+  isDown = false;
+});
+
+slider.addEventListener("mousemove", (e) => {
+  if (!isDown) return;
+
+  e.preventDefault();
+
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 2;
+  slider.scrollLeft = scrollLeft - walk;
+});
+// ---------carousel slider----------herosection ---end

@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@200,300,400,500,600,700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -68,24 +69,26 @@
         <!-- LEFT -->
         <div class="left">
             <img id="mainImage" class="main-img" src="images/image.png">
-            <div class="thumbs">
-                <img src="images/image.png" onclick="changeImage(this)">
-                <img src="images/img2.png" onclick="changeImage(this)">
-                <img src="images/img3.png" onclick="changeImage(this)">
-                <img src="images/img4.png" onclick="changeImage(this)">
+            <div class="thumbs" id="thumbs">
+                <img class="thumb active" src="images/image.png" onclick="changeImage(this)">
+                <img class="thumb" src="images/img2.png" onclick="changeImage(this)">
+                <img class="thumb" src="images/img3.png" onclick="changeImage(this)">
+                <img class="thumb" src="images/img4.png" onclick="changeImage(this)">
+                <img class="thumb" src="images/img3.png" onclick="changeImage(this)">
+                <img class="thumb" src="images/img3.png" onclick="changeImage(this)">
             </div>
         </div>
 
         <!-- RIGHT -->
         <div class="right">
-            <h1 class="title">Prasoothika Ayurvedic Ritual</h1>
+            <h1 class="main-title">Prasoothika Ayurvedic Ritual</h1>
             <p class="subtitle">
                 Postnatal Care Ritual At Home to attain Pre pregnancy state and to remove stretch marks
             </p>
 
             <div class="price-area">
                 <div class="price">
-                    Price:
+                    <h3>Price:</h3>
                     <div class="price-span">
                         <span class="rupee">₹64,800</span>
                         <p class="offer">Special Offer</p>
@@ -93,9 +96,9 @@
                 </div>
 
                 <div class="qty">
-                    <button onclick="minus()">-</button>
+                    <button onclick="minus()"><i class="fa-solid fa-minus"></i></button>
                     <span id="count">30</span>
-                    <button onclick="plus()">+</button>
+                    <button onclick="plus()"><i class="fa-solid fa-plus"></i></button>
                 </div>
             </div>
 
@@ -107,26 +110,30 @@
                 <h3>Select Required Therapy:</h3>
 
                 <div class="options">
+
                     <div class="option active" onclick="selectOption(this)">
                         <p>Mother Massage & Both</p>
-                        75 Minutes
+                        <span>75 Minutes</span>
                     </div>
 
-                    <div class="option light" onclick="selectOption(this)">
+                    <div class="option" onclick="selectOption(this)">
                         <p>Mother & Baby Massage & Both</p>
-                        105 Minutes
+                        <span>105 Minutes</span>
                     </div>
+
                 </div>
             </div>
 
             <div class="location">
                 <h3>Choose your location:</h3>
-                <form class="location-form">
+                <div class="location-form">
                     <input type="text" placeholder="Enter your Address">
-                    <img src="images/location.png" class="location-img">
-                </form>
-            </div>
+                    <div class="location-icon">
+                        <img src="images/location.png" alt="">
+                    </div>
+                </div>
 
+            </div>
             <div class="book">
                 <button>Book Your Therapy</button>
                 <div class="terms">
@@ -139,38 +146,38 @@
     <section class="container products-section">
         <div class="products-title">
             <span class="title-bar"></span>
-            <h2>Products Used</h2>
+            <h2 class="common-h2">Products Used</h2>
         </div>
 
         <div class="products-grid">
 
             <div class="product-card">
-                <img src="images/1.png" alt="">
+                <img src="images/3.png" alt="">
                 <p>3 Ayurvedic Oils for Massages</p>
             </div>
 
             <div class="product-card">
-                <img src="images/2.png" alt="">
+                <img src="images/4.png" alt="">
                 <p>Choorna for Scrub</p>
             </div>
 
             <div class="product-card">
-                <img src="images/3.png" alt="">
+                <img src="images/5.png" alt="">
                 <p>Potlis for Back Pain Relief</p>
             </div>
 
             <div class="product-card">
-                <img src="images/4.png" alt="">
+                <img src="images/6.png" alt="">
                 <p>Kora Cloth for Tummy Wrap</p>
             </div>
 
             <div class="product-card">
-                <img src="images/5.png" alt="">
+                <img src="images/2.png" alt="">
                 <p>Herbs for Medicated Bath</p>
             </div>
 
             <div class="product-card">
-                <img src="images/6.png" alt="">
+                <img src="images/1.png" alt="">
                 <p>Podi Kizhi</p>
             </div>
 
@@ -180,7 +187,7 @@
     <section class="container about-section">
         <div class="products-title">
             <span class="title-bar"></span>
-            <h2>About this therapy</h2>
+            <h2 class="common-h2">About this therapy</h2>
         </div>
 
         <p>
@@ -188,40 +195,47 @@
             women undergo immense physical and mental exertion during labour.
         </p>
 
-        <div class="highlight">
-            Post delivery, one becomes extremely debilitated both physically & mentally. Due to development of foetus,
+        <p class="highlight"> Post delivery, one becomes extremely debilitated both physically & mentally. Due to
+            development of foetus,
             instability of body tissues, exertion of labour pains, excretion of blood and moisture, post delivery mother
-            becomes very weak.
-        </div>
+            becomes very weak.</p>
 
         <p>
-            By following Prasoothika Charya (post pregnancy massage), women can regain all the lost energy and reshape
-            to pre-pregnant status.
+            By following Prasootika Charya (post pregnancy massage), women can regain all the lost energy and reaches to
+            pre-pregnant status. Prasootika Charya is a 45 days ritual which consists of therapies such as Sootika
+            Abhyanga (Post natal massage at home), Choorna Snana, Parisheka (Water Therapy), Sootika Snana (Post Natal
+            Bath) and Udaraveshtana (Abdominal wrap) to soothe your tired muscles, relieve mental stress, detoxify your
+            body and to repair the internal wear and tear of the tissues.
         </p>
 
-        <div class="highlight">
-            This also includes massage of the baby which helps in overall growth and development of the little one.
-        </div>
+        <p class="highlight mb-0"> This also includes massage of the baby which helps in overall growth and development
+            of the little one. Baby massage helps strengthening the baby and prevents baby from frequently falling ill.
+        </p>
         </div>
     </section>
 
     <section class="container how-done-section">
         <div class="products-title">
             <span class="title-bar"></span>
-            <h2>How is it done?</h2>
+            <h2 class="common-h2">How is it done?</h2>
         </div>
 
-        <p>Prasootika Abhyanga: A traditional Post partum massage which helps to pacify Vata Dosha, rejuvenate your
+        <p><span>Prasootika Abhyanga:</span> A traditional Post partum massage which helps to pacify Vata Dosha,
+            rejuvenate your
             tired muscles, relieves you from weakness. The proper therapeutic strokes also prevents thrombosis and
             improves the venous blood flow by dilating superficial blood vessels.</p>
-        <p>Churna Snana: After Abhyanga, Herbal powder will be rubbed against the oleated skin. It helps to remove the
+        <p><span>Churna Snana: </span> After Abhyanga, Herbal powder will be rubbed against the oleated skin. It helps
+            to remove the
             debris from the skin and mobilises the fat.</p>
-        <p>Parisheka: A procedure in which hot water will be splashed/streamed against the abdomen, pacifies Vata &
+        <p><span>Parisheka:</span> A procedure in which hot water will be splashed/streamed against the abdomen,
+            pacifies Vata &
             Kapha Dosha, relieves from pain, tones up the skin and also helps the uterus to set back to the pre-pregnant
             position.</p>
-        <p>Sootika Snana: Decoction of Dhashamoola and Bala Moola Kwatha Choorna will be used in the procedure of
+        <p><span>Sootika Snana:</span> Decoction of Dhashamoola and Bala Moola Kwatha Choorna will be used in the
+            procedure of
             Sootika Snana(bath for the mother). It helps to pacify Vata Dosha and strengthens the muscles.</p>
-        <p>Udaraveshtana: A procedure in which a long cotton cloth is tightly wrapped to the abdomen in order to prevent
+        <p><span>Udaraveshtana:</span> A procedure in which a long cotton cloth is tightly wrapped to the abdomen in
+            order to prevent
             vitiation of Vata Dosha by compressing hollow space produced after expulsion of foetus. It also helps the
             uterus to shrink back to its normal size and straighten the back after pregnancy thereby improving your
             posture.</p>
@@ -234,22 +248,22 @@
     <section class="container benefits">
         <div class="products-title">
             <span class="title-bar"></span>
-            <h2>Benefits</h2>
+            <h2 class="common-h2">Benefits</h2>
         </div>
 
-        <ol id="benefits_list">
-            <li><img src="images/icon.png" class="benefit-icon">Reduces the puffiness in the body by relieving water
+        <ol class="benefits_list">
+            <li><img src="images/icon1.png" class="benefit-icon">Reduces the puffiness in the body by relieving water
                 retention</li>
-            <li><img src="images/icon.png" class="benefit-icon">Post partum massage relaxes and unwinds the tired body
+            <li><img src="images/icon2.png" class="benefit-icon">Post partum massage relaxes and unwinds the tired body
             </li>
-            <li><img src="images/icon.png" class="benefit-icon">Boosts the production of breast milk</li>
-            <li><img src="images/icon.png" class="benefit-icon">Helps in lightening the stretch marks</li>
-            <li><img src="images/icon.png" class="benefit-icon">Tones and tightens belly muscles</li>
-            <li><img src="images/icon.png" class="benefit-icon">Helps reduce post-pregnancy weight</li>
-            <li><img src="images/icon.png" class="benefit-icon">Relieves stress and reduces the incidence of post-partum
-                depression</li>
-            <li><img src="images/icon.png" class="benefit-icon">Makes skin smooth and glowing</li>
-            <li><img src="images/icon.png" class="benefit-icon">Post pregnancy massage improves the quality of sleep
+            <li><img src="images/icon3.png" class="benefit-icon">Boosts the production of breast milk</li>
+            <li><img src="images/icon4.png" class="benefit-icon">Helps in lightening the stretch marks</li>
+            <li><img src="images/icon5.png" class="benefit-icon">Tones and tightens belly muscles</li>
+            <li><img src="images/icon6.png" class="benefit-icon">Helps reduce post-pregnancy weight</li>
+            <li><img src="images/icon7.png" class="benefit-icon">Relieves stress and reduces the incidence of
+                post-partum depression</li>
+            <li><img src="images/icon8.png" class="benefit-icon">Makes skin smooth and glowing</li>
+            <li><img src="images/icon9.png" class="benefit-icon">Post pregnancy massage improves the quality of sleep
             </li>
         </ol>
     </section>
@@ -257,7 +271,7 @@
     <section class="container contraindications">
         <div class="products-title">
             <span class="title-bar"></span>
-            <h2>Contraindications</h2>
+            <h2 class="common-h2">Contraindications</h2>
         </div>
 
         <div class="contra-box">
@@ -309,56 +323,93 @@
         </div>
     </section>
 
-    <section class="container doctors">
-        <h2>Consult Ayurvedic Doctors Online</h2>
-        <p>Talk to our Expert Ayurvedic Doctors. Find the most suitable treatments for you.</p>
+    <section class="doctors">
+            <div class="doctors-title">
+                <h2>Consult Ayurvedic Doctors Online</h2>
+                <p>Talk to our Expert Ayurvedic Doctors. Find the most suitable treatments for you.</p>
+            </div>
+            <div class="doctor-slider owl-carousel">
 
-        <div class="owl-carousel doctors-slider">
-            <article class="doctor-card card">
-                <img src="images/doctor1.png">
-                <div class="doctor-content">
-                    <h3>Dr. Sri Ranjani Bhat</h3>
-                    <p>BAMS (Arthritis, Sciatica, ACL, Skin Issues, PCOD, Panchakarma)</p>
-                    <button class="btn btn-outline">8 Years of Experience</button>
-                </div>
-            </article>
+                <div class="doctor-card">
 
-            <article class="doctor-card card">
-                <img src="images/doctor2.png">
-                <div class="doctor-content">
-                    <h3>Dr. Pooja Jaiswal</h3>
-                    <p>BAMS (Diet Counselling, Panchakarma Therapies, Skin & Hair Care)</p>
-                    <button class="btn btn-outline">4 Years of Experience</button>
-                </div>
-            </article>
+                    <div class="doctor-img">
+                        <img src="images/doctor1.png">
+                        <span class="online"></span>
+                    </div>
 
-            <article class="doctor-card card">
-                <img src="images/doctor3.png">
-                <div class="doctor-content">
-                    <h3>Dr. Sri Ranjani Bhat</h3>
-                    <p>BAMS MD PGD YOGA (Cancer, Diabetes, Heart Diseases)</p>
-                    <button class="btn btn-outline">5 Years of Experience</button>
-                </div>
-            </article>
+                    <div class="doctor-info">
+                        <h4>Sri Ranjani Bhat</h4>
+                        <p>Arthritis, Sciatica, ACL, Skin Issues</p>
+                        <span>8 Years of Experience</span>
+                    </div>
 
-            <article class="doctor-card card">
-                <img src="images/doctor4.png">
-                <div class="doctor-content">
-                    <h3>Dr. Sethu R</h3>
-                    <p>BAMS, MD (Sciatica, Musculoskeletal Disorders, Hormonal Issues)</p>
-                    <button class="btn btn-outline">5 Years of Experience</button>
                 </div>
-            </article>
 
-            <article class="doctor-card card">
-                <img src="images/doctor5.png">
-                <div class="doctor-content">
-                    <h3>Dr. Deepthi Viswaroopan</h3>
-                    <p>BAMS, MD (Pediatric Disorders, Musculoskeletal Disorders, Skin Issues)</p>
-                    <button class="btn btn-outline">9 Years of Experience</button>
+
+                <div class="doctor-card">
+
+                    <div class="doctor-img">
+                        <img src="images/doctor2.png">
+                        <span class="online"></span>
+                    </div>
+
+                    <div class="doctor-info">
+                        <h4>Dr. Lekshmi S Kumar</h4>
+                        <p>BAMS (Diet Counseling, Panchakarma)</p>
+                        <span>4 Years of Experience</span>
+                    </div>
+
                 </div>
-            </article>
-        </div>
+
+
+                <div class="doctor-card">
+
+                    <div class="doctor-img">
+                        <img src="images/doctor3.png">
+                        <span class="online"></span>
+                    </div>
+
+                    <div class="doctor-info">
+                        <h4>Dr. Pooja Jaiswal</h4>
+                        <p>BAMS MD PGD YOGA</p>
+                        <span>5 Years of Experience</span>
+                    </div>
+
+                </div>
+
+
+                <div class="doctor-card">
+
+                    <div class="doctor-img">
+                        <img src="images/doctor4.png">
+                        <span class="online"></span>
+                    </div>
+
+                    <div class="doctor-info">
+                        <h4>Dr. Sethu R</h4>
+                        <p>BAMS, MD</p>
+                        <span>5 Years of Experience</span>
+                    </div>
+
+                </div>
+
+
+                <div class="doctor-card">
+
+                    <div class="doctor-img">
+                        <img src="images/doctor1.png">
+                        <span class="online"></span>
+                    </div>
+
+                    <div class="doctor-info">
+                        <h4>Dr. Deepthi</h4>
+                        <p>BAMS, MD</p>
+                        <span>9 Years of Experience</span>
+                    </div>
+
+                </div>
+
+            </div>
     </section>
 
     <!-- ---information- -->
@@ -593,9 +644,9 @@
     <script>
 
         /* Image change */
-        function changeImage(el) {
-            document.getElementById("mainImage").src = el.src;
-        }
+        // function changeImage(el) {
+        //     document.getElementById("mainImage").src = el.src;
+        // }
 
         /* Quantity */
 
@@ -632,7 +683,7 @@
 
             $('.therapy-slider').owlCarousel({
                 loop: true,
-                margin: 20,
+                margin: 30,
                 nav: false,
                 dots: true,
                 autoplay: true,
@@ -648,35 +699,24 @@
         });
 
 
-        $(document).ready(function () {
+        $('.doctor-slider').owlCarousel({
+            loop: true,
+            margin: 25,
+            nav: false,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 2500,
+            autoplayHoverPause: true,
 
-            $('.doctors-slider').owlCarousel({
-                loop: true,
-                margin: 20,
-                nav: false,
-                dots: true,
-                autoplay: true,
-                autoplayTimeout: 3500,
-                autoplayHoverPause: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 2
-                    },
-                    992: {
-                        items: 3
-                    },
-                    1200: {
-                        items: 4
-                    }
-                }
-            });
+            responsive: {
+                0: { items: 1 },
+                600: { items: 2 },
+                900: { items: 3 },
+                1200: { items: 4 },
+                1400: { items: 5 }
+            }
 
         });
-
-
     </script>
 
 
