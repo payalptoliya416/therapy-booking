@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayursh Therapy Booking</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- -----icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- -----------owl carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+</head>
+
+<body>
+
+    <header class="topbar" id="top">
+        <div class="container nav-wrap">
+            <a class="logo" href="#top" aria-label="Ayursh home">
+                <img src="images/logo.png">
+            </a>
+
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="nav" id="main-nav" aria-label="Main navigation">
+                <a href="#">Home</a>
+                <a href="#services">Our Services</a>
+                <a href="#doctors">Consult Doctors</a>
+                <a href="#products">Shop Medicines</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a class="btn btn-contact" href="#footer">Contact Us</a>
+                <a class="btn btn-login" href="#">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero section" aria-label="Therapy search">
+        <div class="leaf leaf-left" aria-hidden="true"></div>
+        <div class="leaf leaf-right" aria-hidden="true"></div>
+        <div class="container hero-content">
+            <h1>Search for massage, back pain, postnatal, etc</h1>
+            <form class="search-bar" role="search" aria-label="Search therapies">
+                <label for="therapy-search" class="sr-only">Search therapy</label>
+                <span class="search-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M11 4a7 7 0 1 1 0 14 7 7 0 0 1 0-14Zm0-2a9 9 0 1 0 5.7 16l4.7 4.7 1.4-1.4-4.7-4.7A9 9 0 0 0 11 2Z" />
+                    </svg>
+                </span>
+                <input id="therapy-search" type="search" placeholder="Search" />
+            </form>
+        </div>
+    </section>
+
+    <!-- ================= SESSION SELECTOR ================= -->
+
+    <section class="container therapy-section">
+        <!-- LEFT -->
+        <div class="left">
+            <img id="mainImage" class="main-img" src="images/image.png">
+            <div class="thumbs">
+                <img src="images/image.png" onclick="changeImage(this)">
+                <img src="images/img2.png" onclick="changeImage(this)">
+                <img src="images/img3.png" onclick="changeImage(this)">
+                <img src="images/img4.png" onclick="changeImage(this)">
+            </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="right">
+            <h1 class="title">Prasoothika Ayurvedic Ritual</h1>
+            <p class="subtitle">
+                Postnatal Care Ritual At Home to attain Pre pregnancy state and to remove stretch marks
+            </p>
+
+            <div class="price-area">
+                <div class="price">
+                    Price:
+                    <div class="price-span">
+                        <span class="rupee">₹64,800</span>
+                        <p class="offer">Special Offer</p>
+                    </div>
+                </div>
+
+                <div class="qty">
+                    <button onclick="minus()">-</button>
+                    <span id="count">30</span>
+                    <button onclick="plus()">+</button>
+                </div>
+            </div>
+
+            <p class="discount">
+                10% Discount applied. Package Validity: 90 days. Get 20% Discount on 45 Sessions Package.
+            </p>
+
+            <div class="therapy">
+                <h3>Select Required Therapy:</h3>
+
+                <div class="options">
+                    <div class="option active" onclick="selectOption(this)">
+                        <p>Mother Massage & Both</p>
+                        75 Minutes
+                    </div>
+
+                    <div class="option light" onclick="selectOption(this)">
+                        <p>Mother & Baby Massage & Both</p>
+                        105 Minutes
+                    </div>
+                </div>
+            </div>
+
+            <div class="location">
+                <h3>Choose your location:</h3>
+                <form class="location-form">
+                    <input type="text" placeholder="Enter your Address">
+                    <img src="images/location.png" class="location-img">
+                </form>
+            </div>
+
+            <div class="book">
+                <button>Book Your Therapy</button>
+                <div class="terms">
+                    By Continuing, I Agree to <a href="#">Terms and Conditions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container products-section">
+        <div class="products-title">
+            <span class="title-bar"></span>
+            <h2>Products Used</h2>
+        </div>
+
+        <div class="products-grid">
+
+            <div class="product-card">
+                <img src="images/1.png" alt="">
+                <p>3 Ayurvedic Oils for Massages</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/2.png" alt="">
+                <p>Choorna for Scrub</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/3.png" alt="">
+                <p>Potlis for Back Pain Relief</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/4.png" alt="">
+                <p>Kora Cloth for Tummy Wrap</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/5.png" alt="">
+                <p>Herbs for Medicated Bath</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/6.png" alt="">
+                <p>Podi Kizhi</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container about-section">
+        <div class="products-title">
+            <span class="title-bar"></span>
+            <h2>About this therapy</h2>
+        </div>
+
+        <p>
+            Motherhood is all about Loving, Sharing, Sacrificing, Struggling and Reviving. From pregnancy to motherhood,
+            women undergo immense physical and mental exertion during labour.
+        </p>
+
+        <div class="highlight">
+            Post delivery, one becomes extremely debilitated both physically & mentally. Due to development of foetus,
+            instability of body tissues, exertion of labour pains, excretion of blood and moisture, post delivery mother
+            becomes very weak.
+        </div>
+
+        <p>
+            By following Prasoothika Charya (post pregnancy massage), women can regain all the lost energy and reshape
+            to pre-pregnant status.
+        </p>
+
+        <div class="highlight">
+            This also includes massage of the baby which helps in overall growth and development of the little one.
+        </div>
+        </div>
+    </section>
+
+    <section class="container how-done-section">
+        <div class="products-title">
+            <span class="title-bar"></span>
+            <h2>How is it done?</h2>
+        </div>
+
+        <p>Prasootika Abhyanga: A traditional Post partum massage which helps to pacify Vata Dosha, rejuvenate your
+            tired muscles, relieves you from weakness. The proper therapeutic strokes also prevents thrombosis and
+            improves the venous blood flow by dilating superficial blood vessels.</p>
+        <p>Churna Snana: After Abhyanga, Herbal powder will be rubbed against the oleated skin. It helps to remove the
+            debris from the skin and mobilises the fat.</p>
+        <p>Parisheka: A procedure in which hot water will be splashed/streamed against the abdomen, pacifies Vata &
+            Kapha Dosha, relieves from pain, tones up the skin and also helps the uterus to set back to the pre-pregnant
+            position.</p>
+        <p>Sootika Snana: Decoction of Dhashamoola and Bala Moola Kwatha Choorna will be used in the procedure of
+            Sootika Snana(bath for the mother). It helps to pacify Vata Dosha and strengthens the muscles.</p>
+        <p>Udaraveshtana: A procedure in which a long cotton cloth is tightly wrapped to the abdomen in order to prevent
+            vitiation of Vata Dosha by compressing hollow space produced after expulsion of foetus. It also helps the
+            uterus to shrink back to its normal size and straighten the back after pregnancy thereby improving your
+            posture.</p>
+        <p>In addition to the aforementioned therapies, medicated potlis will also be supplied for the pain relief. Our
+            Ayurvedic Experts would guide you with suitable medicines to speed up the healing process and to increase
+            the production of breast milk</p>
+
+    </section>
+
+    <section class="container benefits">
+        <div class="products-title">
+            <span class="title-bar"></span>
+            <h2>Benefits</h2>
+        </div>
+
+        <ol id="benefits_list">
+            <li><img src="images/icon.png" class="benefit-icon">Reduces the puffiness in the body by relieving water
+                retention</li>
+            <li><img src="images/icon.png" class="benefit-icon">Post partum massage relaxes and unwinds the tired body
+            </li>
+            <li><img src="images/icon.png" class="benefit-icon">Boosts the production of breast milk</li>
+            <li><img src="images/icon.png" class="benefit-icon">Helps in lightening the stretch marks</li>
+            <li><img src="images/icon.png" class="benefit-icon">Tones and tightens belly muscles</li>
+            <li><img src="images/icon.png" class="benefit-icon">Helps reduce post-pregnancy weight</li>
+            <li><img src="images/icon.png" class="benefit-icon">Relieves stress and reduces the incidence of post-partum
+                depression</li>
+            <li><img src="images/icon.png" class="benefit-icon">Makes skin smooth and glowing</li>
+            <li><img src="images/icon.png" class="benefit-icon">Post pregnancy massage improves the quality of sleep
+            </li>
+        </ol>
+    </section>
+
+    <section class="container contraindications">
+        <div class="products-title">
+            <span class="title-bar"></span>
+            <h2>Contraindications</h2>
+        </div>
+
+        <div class="contra-box">
+            <img src="images/right-arrow.png" class="right-arrow">
+            Prasoothika charya is done only after 5 to 7 days following normal delivery
+        </div>
+
+        <div class="contra-box">
+            <img src="images/right-arrow.png" class="right-arrow">
+            In case of caesarean section, therapy should not be done for three weeks until the surgery scar heals.
+        </div>
+    </section>
+
+    <section class="container recommended-section">
+        <div class="rec-slider card">
+            <h2>Recommended Therapies</h2>
+
+            <div class="owl-carousel therapy-slider">
+                <article class="slide-card">
+                    <img src="images/image1.png" alt="Prasoothika ritual">
+                    <h3>Prasoothika Ayurveda Ritual</h3>
+                </article>
+
+                <article class="slide-card">
+                    <img src="images/image2.png" alt="Postpartum massage">
+                    <h3>Postpartum Massage</h3>
+                </article>
+
+                <article class="slide-card">
+                    <img src="images/image3.png" alt="Prenatal massage">
+                    <h3>Prenatal Massage</h3>
+                </article>
+
+                <article class="slide-card">
+                    <img src="images/image1.png" alt="Prasoothika ritual">
+                    <h3>Prasoothika Ayurveda Ritual</h3>
+                </article>
+
+                <article class="slide-card">
+                    <img src="images/image2.png" alt="Postpartum massage">
+                    <h3>Postpartum Massage</h3>
+                </article>
+
+                <article class="slide-card">
+                    <img src="images/image3.png" alt="Prenatal massage">
+                    <h3>Prenatal Massage</h3>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="container doctors">
+        <h2>Consult Ayurvedic Doctors Online</h2>
+        <p>Talk to our Expert Ayurvedic Doctors. Find the most suitable treatments for you.</p>
+
+        <div class="owl-carousel doctors-slider">
+            <article class="doctor-card card">
+                <img src="images/doctor1.png">
+                <div class="doctor-content">
+                    <h3>Dr. Sri Ranjani Bhat</h3>
+                    <p>BAMS (Arthritis, Sciatica, ACL, Skin Issues, PCOD, Panchakarma)</p>
+                    <button class="btn btn-outline">8 Years of Experience</button>
+                </div>
+            </article>
+
+            <article class="doctor-card card">
+                <img src="images/doctor2.png">
+                <div class="doctor-content">
+                    <h3>Dr. Pooja Jaiswal</h3>
+                    <p>BAMS (Diet Counselling, Panchakarma Therapies, Skin & Hair Care)</p>
+                    <button class="btn btn-outline">4 Years of Experience</button>
+                </div>
+            </article>
+
+            <article class="doctor-card card">
+                <img src="images/doctor3.png">
+                <div class="doctor-content">
+                    <h3>Dr. Sri Ranjani Bhat</h3>
+                    <p>BAMS MD PGD YOGA (Cancer, Diabetes, Heart Diseases)</p>
+                    <button class="btn btn-outline">5 Years of Experience</button>
+                </div>
+            </article>
+
+            <article class="doctor-card card">
+                <img src="images/doctor4.png">
+                <div class="doctor-content">
+                    <h3>Dr. Sethu R</h3>
+                    <p>BAMS, MD (Sciatica, Musculoskeletal Disorders, Hormonal Issues)</p>
+                    <button class="btn btn-outline">5 Years of Experience</button>
+                </div>
+            </article>
+
+            <article class="doctor-card card">
+                <img src="images/doctor5.png">
+                <div class="doctor-content">
+                    <h3>Dr. Deepthi Viswaroopan</h3>
+                    <p>BAMS, MD (Pediatric Disorders, Musculoskeletal Disorders, Skin Issues)</p>
+                    <button class="btn btn-outline">9 Years of Experience</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ---information- -->
+    <section>
+        <div class="container">
+            <h2 class="common-title">More Information</h2>
+            <div class="info-section">
+                <div class="accordion">
+
+                    <!-- item 1 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Ayurvedic Postnatal Massage for Mother’s Recovery
+                            <span class="icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+
+                        <div class="accordion-body">
+                            <p>
+                                Ayursh provides professional Postnatal Massage Near Me services with certified
+                                therapists who
+                                specialize in postpartum care. Our approach combines traditional Ayurveda techniques
+                                with
+                                personalized attention, ensuring mothers receive safe and effective Postpartum Recovery
+                                Massage
+                                at home. From relieving body aches and promoting hormonal balance to toning muscles and
+                                enhancing skin elasticity, our Postnatal Ayurvedic Care at Home is tailored to each new
+                                mom’s
+                                needs. With Ayursh, mothers can enjoy trusted New Mom Massage Services and Postnatal
+                                Massage
+                                Services designed to support physical and emotional well-being, helping them regain
+                                strength and
+                                vitality after childbirth.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- item 2 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Postnatal Massage Services We Offer
+                            <span class="icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+
+                        <div class="accordion-body">
+                            <p>
+                                Ayursh provides professional Postnatal Massage Near Me services with certified
+                                therapists who specialize in postpartum care. Our approach combines traditional Ayurveda
+                                techniques with personalized attention, ensuring mothers receive safe and effective
+                                Postpartum Recovery Massage at home. From relieving body aches and promoting hormonal
+                                balance to toning muscles and enhancing skin elasticity, our Postnatal Ayurvedic Care at
+                                Home is tailored to each new mom’s needs. With Ayursh, mothers can enjoy trusted New Mom
+                                Massage Services and Postnatal Massage Services designed to support physical and
+                                emotional well-being, helping them regain strength and vitality after childbirth.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- item 3 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Postnatal Ayurvedic Care at Home with Ayursh
+                            <span class="icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+
+                        <div class="accordion-body">
+                            <p>
+                                Ayursh provides professional Postnatal Massage Near Me services with certified
+                                therapists who specialize in postpartum care. Our approach combines traditional Ayurveda
+                                techniques with personalized attention, ensuring mothers receive safe and effective
+                                Postpartum Recovery Massage at home. From relieving body aches and promoting hormonal
+                                balance to toning muscles and enhancing skin elasticity, our Postnatal Ayurvedic Care at
+                                Home is tailored to each new mom’s needs. With Ayursh, mothers can enjoy trusted New Mom
+                                Massage Services and Postnatal Massage Services designed to support physical and
+                                emotional well-being, helping them regain strength and vitality after childbirth.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ---FAQ Section--- -->
+    <section class="faq-section">
+        <div class="container">
+
+            <h2 class="common-title">Frequently Asked Questions</h2>
+
+            <div class="info-section">
+                <div class="accordion">
+
+                    <!-- item 1 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            What is postnatal massage, and how does it help after pregnancy?
+                            <span class="icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+
+                        <div class="accordion-body">
+                            <p>
+                                Postnatal massage is a therapeutic treatment designed for new mothers after childbirth.
+                                It helps relieve body pain, reduce swelling, improve blood circulation, balance
+                                hormones,
+                                and support faster recovery. It also helps relax muscles and improves emotional
+                                well-being.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- item 2 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            How can I book a postnatal massage service near me?
+                            <span class="icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+
+                        <div class="accordion-body">
+                            <p>
+                                You can book a postnatal massage service through our website or by contacting our
+                                support team.
+                                Our certified therapists will visit your home and provide safe and personalized massage
+                                care.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- item 3 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            When should I start postnatal massage after delivery?
+                            <span class="icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+
+                        <div class="accordion-body">
+                            <p>
+                                Postnatal massage can usually begin within a few days after a normal delivery, while for
+                                C-section deliveries it is recommended after proper medical consultation and healing
+                                time.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- item 4 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Is postnatal Ayurvedic massage safe for all new mothers?
+                            <span class="icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+
+                        <div class="accordion-body">
+                            <p>
+                                Yes, Ayurvedic postnatal massage is generally safe when performed by trained
+                                professionals.
+                                However, mothers with specific medical conditions should consult their doctor first.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- item 5 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            How many postnatal massage sessions are recommended?
+                            <span class="icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+
+                        <div class="accordion-body">
+                            <p>
+                                Typically, 7 to 14 sessions are recommended depending on the mother’s health and
+                                recovery
+                                needs. Regular sessions help restore strength and support faster healing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- item 6 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Do you provide postnatal massage for both normal and C-section deliveries?
+                            <span class="icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+
+                        <div class="accordion-body">
+                            <p>
+                                Yes, we provide postnatal massage services for both normal and C-section deliveries.
+                                Our therapists adapt techniques based on the mother’s condition and recovery stage.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- item 7 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            What cities do you cover for at home postnatal massage services?
+                            <span class="icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+
+                        <div class="accordion-body">
+                            <p>
+                                Our at-home postnatal massage services are available in multiple cities.
+                                Please check service availability in your location while booking.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- item 8 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Are your postnatal massage therapists certified and trained?
+                            <span class="icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+
+                        <div class="accordion-body">
+                            <p>
+                                Yes, all our therapists are professionally trained and certified in postnatal care and
+                                Ayurvedic massage techniques to ensure safe and effective treatment.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+
+        /* Image change */
+        function changeImage(el) {
+            document.getElementById("mainImage").src = el.src;
+        }
+
+        /* Quantity */
+
+        let count = 30;
+
+        function plus() {
+            count++;
+            document.getElementById("count").innerText = count;
+        }
+
+        function minus() {
+            if (count > 1) {
+                count--;
+                document.getElementById("count").innerText = count;
+            }
+        }
+
+        /* Therapy selection */
+
+        function selectOption(el) {
+            let options = document.querySelectorAll(".option");
+
+            options.forEach(o => {
+                o.classList.remove("active");
+            })
+
+            el.classList.add("active");
+        }
+
+
+        /* Owl Slider */
+
+        $(function () {
+
+            $('.therapy-slider').owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: false,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 },
+                    1024: { items: 3 }
+                }
+            });
+
+        });
+
+
+        $(document).ready(function () {
+
+            $('.doctors-slider').owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: false,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 3500,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    992: {
+                        items: 3
+                    },
+                    1200: {
+                        items: 4
+                    }
+                }
+            });
+
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>
