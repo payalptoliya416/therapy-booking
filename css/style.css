@@ -235,6 +235,9 @@ h2 {
   display: flex;
   gap: 15px;
 }
+.nav-left{
+    display: none;
+}
 .contact-btn {
   padding: 10px 25px;
   border-radius: 18px;
@@ -332,6 +335,11 @@ h2 {
   .nav-right {
     display: none;
   }
+  .nav-left{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -342,6 +350,7 @@ h2 {
     width: 50px;
   }
 }
+
 /* ---------header end */
 
 /* ------hero start-- */
