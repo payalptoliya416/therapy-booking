@@ -1705,7 +1705,7 @@ h2 {
 /* --------testimonial start ----- */
 .testimonials {
   padding-bottom: 120px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .testimonial-card {
