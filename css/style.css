@@ -2181,6 +2181,12 @@ h2 {
   top: 36%;
   z-index: -1;
 }
+.ii2 {
+  position: absolute;
+  right: 0%;
+  top: 36%;
+  z-index: -1;
+}
 @media (max-width: 640px) {
   .im11 {
     top: -14%;
@@ -2188,8 +2194,8 @@ h2 {
   .im12 {
     top: -14%;
   }
-  .im13 {
-    top: 50%;
+  .im13 ,.ii2 {
+    top: 70%;
   }
 }
 /* -------- leaves responsive -------- */
@@ -2209,6 +2215,7 @@ h2 {
   .im10,
   .im11,
   .im12,
+  .ii2,
   .im13 {
     width: 200px;
   }
@@ -2230,6 +2237,7 @@ h2 {
   .im10,
   .im11,
   .im12,
+   .ii2,
   .im13 {
     width: 160px;
   }
@@ -2251,6 +2259,7 @@ h2 {
   .im10,
   .im11,
   .im12,
+   .ii2,
   .im13 {
     width: 120px;
   }
@@ -2272,6 +2281,7 @@ h2 {
   .im10,
   .im11,
   .im12,
+   .ii2,
   .im13 {
     width: 100px;
   }
