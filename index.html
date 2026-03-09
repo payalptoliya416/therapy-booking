@@ -925,15 +925,15 @@
             autoplay: true,
             autoplayTimeout: 2500,
             autoplayHoverPause: true,
+            stagePadding: 80,  
 
-            responsive: {
-                0: { items: 1 },
-                600: { items: 2 },
-                900: { items: 3 },
-                1200: { items: 4 },
-                1440: { items: 4 },
-                1499: { items: 5 }
-            }
+           responsive: {
+        0: { items: 1, stagePadding: 40 },
+        600: { items: 2, stagePadding: 60 },
+        900: { items: 3, stagePadding: 70 },
+        1200: { items: 4, stagePadding: 80 },
+        1440: { items: 4, stagePadding: 80 },
+    }
 
         });
 
