@@ -149,6 +149,13 @@ a {
   background: #C6672F;
   border-radius: 8px 0 0 8px;
 }
+
+@media(max-width:1440px){
+  .floating-contact{
+  top: 70%;
+}
+}
+
 @media(max-width:768px){
 .floating-contact a {
   width: 55px;
