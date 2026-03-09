@@ -371,10 +371,12 @@ a {
     border-radius: 12px;
   }
 }
+
 @media (max-width: 1099px) {
   .nav-wrapper{
     grid-template-columns: 2fr 10fr ;
   }
+
   .nav-menu {
     position: fixed;
     top: 0;
@@ -2071,7 +2073,7 @@ a {
 }
 @media (max-width: 640px) {
   .im3 {
-    top: 100%;
+    top: 110%;
   }
 }
 .position-relative {
@@ -2083,7 +2085,11 @@ a {
   top: 0%;
   z-index: -1;
 }
-
+@media (max-width: 640px) {
+  .im4 {
+   display: none;
+  }
+}
 .im5 {
   position: absolute;
   right: 0%;
